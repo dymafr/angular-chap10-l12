@@ -13,7 +13,10 @@ export const APP_ROUTES: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     component: UsersComponent,
-    children: [{ path: ":id", component: UserComponent }]
+    children: [
+      { path: ":id/edit", component: UserEditComponent },
+      { path: ":id", component: UserComponent }
+    ]
   },
   { path: "**", redirectTo: "" }
 ];

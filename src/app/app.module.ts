@@ -6,6 +6,7 @@ import { UsersComponent } from "./users/users.component";
 import { UserComponent } from "./user/user.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 @NgModule({
   imports: [BrowserModule, AppRoutingModule],
@@ -14,7 +15,8 @@ import { AppRoutingModule } from "./app-routing.module";
     HomepageComponent,
     UsersComponent,
     UserComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UserEditComponent
   ],
   bootstrap: [AppComponent],
   providers: []
