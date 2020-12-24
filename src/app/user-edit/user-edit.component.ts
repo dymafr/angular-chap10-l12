@@ -9,7 +9,11 @@ export class UserEditComponent implements OnInit {
   public save: boolean = false;
 
   canDeactivate(): boolean {
-    return this.save;
+    if (this.save) {
+      return true;
+    } else {
+      return confirm("Etes-vous certain de vouloir quitter ?");
+    }
   }
 
   constructor() {}
