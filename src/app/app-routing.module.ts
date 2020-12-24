@@ -3,6 +3,7 @@ import { RouterModule } from "@angular/router";
 import { Routes } from "@angular/router";
 import { AuthGuard } from "./auth.guard";
 import { HomepageComponent } from "./homepage/homepage.component";
+import { UserEditComponent } from "./user-edit/user-edit.component";
 import { UserComponent } from "./user/user.component";
 import { UsersComponent } from "./users/users.component";
 
