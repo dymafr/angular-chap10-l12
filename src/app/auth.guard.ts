@@ -31,6 +31,6 @@ export class AuthGuard
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ) {
-    return false;
+    return component.canDeactivate();
   }
 }
