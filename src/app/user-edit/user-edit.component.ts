@@ -6,8 +6,10 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./user-edit.component.scss"]
 })
 export class UserEditComponent implements OnInit {
+  public save: boolean = false;
+
   canDeactivate(): boolean {
-    return false;
+    return this.save;
   }
 
   constructor() {}
