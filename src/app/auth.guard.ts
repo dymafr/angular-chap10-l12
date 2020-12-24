@@ -6,9 +6,11 @@ import {
   CanDeactivate,
   RouterStateSnapshot
 } from "@angular/router";
+import { UserEditComponent } from "./user-edit/user-edit.component";
 
 @Injectable({ providedIn: "root" })
-export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate {
+export class AuthGuard
+  implements CanActivate, CanActivateChild, CanDeactivate<UserEditComponent> {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -24,7 +26,11 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate {
     return true;
   }
 
-  canDeactivate() {
+  canDeactivate(
+    component: UserEditComponent,
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ) {
     return false;
   }
 }
