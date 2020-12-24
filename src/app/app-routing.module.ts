@@ -15,7 +15,11 @@ export const APP_ROUTES: Routes = [
     canActivateChild: [AuthGuard],
     component: UsersComponent,
     children: [
-      { path: ":id/edit", component: UserEditComponent },
+      {
+        path: ":id/edit",
+        canDeactivate: [AuthGuard],
+        component: UserEditComponent
+      },
       { path: ":id", component: UserComponent }
     ]
   },

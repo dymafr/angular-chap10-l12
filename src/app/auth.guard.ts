@@ -3,11 +3,12 @@ import {
   ActivatedRouteSnapshot,
   CanActivate,
   CanActivateChild,
+  CanDeactivate,
   RouterStateSnapshot
 } from "@angular/router";
 
 @Injectable({ providedIn: "root" })
-export class AuthGuard implements CanActivate, CanActivateChild {
+export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -21,5 +22,9 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     state: RouterStateSnapshot
   ): boolean {
     return true;
+  }
+
+  canDeactivate() {
+    return false;
   }
 }
