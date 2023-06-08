@@ -4,7 +4,8 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 export const formUserGuard: CanDeactivateFn<UserEditComponent> = (
   component,
   route,
-  state
+  state,
+  nextState
 ) => {
   if (component.save) {
     return true;
